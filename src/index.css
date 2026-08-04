@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { --cursor-x: 50%; --cursor-y: 25%; }
+  html { scroll-behavior: smooth; }
+  body { @apply overflow-x-hidden bg-[#09090B] font-sans text-white antialiased; }
+  a, button { -webkit-tap-highlight-color: transparent; }
+  ::selection { @apply bg-blue-500/30 text-white; }
+}
+
+@layer components {
+  .section-label { @apply text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-400; }
+  .section-anchor { scroll-margin-top: 6rem; }
+  .surface { @apply border border-white/[0.09] bg-zinc-900/45 shadow-[0_16px_45px_rgba(0,0,0,0.12)]; }
+}
+
+@layer utilities {
+  .text-gradient { @apply bg-gradient-to-r from-white via-zinc-100 to-blue-300 bg-clip-text text-transparent; }
+  .cursor-glow { background: radial-gradient(520px circle at var(--cursor-x) var(--cursor-y), rgba(59, 130, 246, 0.12), transparent 42%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
