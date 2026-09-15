@@ -10,18 +10,21 @@ import Container from '../components/common/Container';
 import Reveal from '../components/common/Reveal';
 
 const projects = [
-  { name: 'Wanderlust', category: 'Open-source web project', description: 'A travel-inspired portfolio project published as an open-source codebase, with the implementation available to explore on GitHub.', impact: 'Shows an end-to-end approach to building and sharing a web application.', stack: ['Open source', 'Web application'], github: 'https://github.com/poonam-gh/Wanderlust', visual: 'from-orange-400/25 via-rose-500/10 to-transparent', mark: 'WL' },
+  { name: 'OrderFlow', category: 'Event-driven backend \u00b7 Go', description: 'An event-driven order-processing backend built in Go using the outbox pattern, writing orders to PostgreSQL and queuing background jobs in a single transaction so payment processing and notifications run asynchronously without blocking the API.', impact: 'Worker pool with a hand-rolled circuit breaker for a flaky payment gateway, Redis for caching, rate limiting, and distributed locking, plus a Cobra CLI with Prometheus observability so one binary runs as the API, worker, or migration tool.', stack: ['Go', 'Gin', 'PostgreSQL', 'Redis', 'Cobra CLI', 'Prometheus'], github: 'https://github.com/poonam-gh/OrderFlow', visual: 'from-blue-500/25 via-indigo-500/10 to-transparent', mark: 'OF' },
+  { name: 'Wanderlust', category: 'Full-stack \u00b7 Node.js', description: 'A full-stack holiday home discovery and listing management platform, with frontend views and a Node.js/Express.js/MongoDB backend.', impact: 'Built secure authentication and role-based authorization, and RESTful APIs supporting listing management, user reviews, and ratings.', stack: ['EJS', 'Node.js', 'Express.js', 'MongoDB'], github: 'https://github.com/poonam-gh/Wanderlust', visual: 'from-orange-400/25 via-rose-500/10 to-transparent', mark: 'WL' },
   { name: 'Songify', category: 'Open-source web project', description: 'A music-inspired portfolio project published as an open-source codebase, with the full implementation available on GitHub.', impact: 'Demonstrates an interest in thoughtful, product-oriented web experiences.', stack: ['Open source', 'Web application'], github: 'https://github.com/poonam-gh/Songify', visual: 'from-lime-400/20 via-green-500/10 to-transparent', mark: 'SG' },
   { name: 'Timetable Generator', category: 'Optimisation \u00b7 Streamlit', description: 'An automated scheduling tool that uses optimisation logic to replace repetitive timetable planning with a guided interface.', impact: 'Reduces manual scheduling effort through automated generation.', stack: ['Python', 'Streamlit', 'Optimisation'], visual: 'from-emerald-500/25 via-cyan-500/10 to-transparent', mark: 'TG' },
   { name: 'AI Movie Recommender', category: 'Machine learning \u00b7 Streamlit', description: 'An AI-powered movie recommendation experience with a focused, interactive interface for personalised suggestions.', impact: 'Brings recommendation algorithms into a simple, usable product flow.', stack: ['Python', 'Streamlit', 'Machine Learning'], visual: 'from-violet-500/30 via-blue-500/10 to-transparent', mark: 'AI' },
 ];
 
 const skillGroups = [
-  ['Languages', ['C++', 'Python', 'JavaScript', 'C#']],
-  ['Frontend', ['React', 'HTML', 'CSS', 'Tailwind CSS']],
-  ['Backend', ['Node.js', 'Express.js', 'ASP.NET MVC', 'REST APIs']],
-  ['Databases', ['MongoDB', 'MySQL', 'SQL Server', 'PostgreSQL']],
-  ['Tools', ['Git', 'GitHub', 'Azure DevOps', 'Postman']],
+  ['Languages', ['C++', 'Go', 'C#', 'JavaScript', 'Python', 'SQL']],
+  ['Core CS', ['Data Structures & Algorithms', 'OOP', 'DBMS', 'Operating Systems', 'Computer Networks']],
+  ['Frontend', ['React.js', 'HTML5', 'CSS3', 'JavaScript', 'jQuery']],
+  ['Backend & APIs', ['Go (Gin)', 'RESTful APIs', 'Node.js', 'Express.js', 'ASP.NET MVC']],
+  ['Databases', ['PostgreSQL', 'SQL Server', 'MySQL', 'MongoDB', 'Redis']],
+  ['Systems & Backend Engineering', ['Event-Driven Architecture', 'Outbox Pattern', 'Circuit Breakers', 'Worker Pools', 'Distributed Locking', 'Observability']],
+  ['Tools & Practices', ['Git', 'GitHub', 'Azure DevOps', 'Postman', 'Unit Testing', 'Debugging', 'Agile/SDLC']],
   ['AI engineering', ['LangChain', 'LlamaIndex', 'RAG', 'AI Agents', 'FastAPI', 'Vector Databases']],
 ];
 
